@@ -11,29 +11,35 @@ An order can consist of multiple product and amount of purchasing
 
 # Example 
 ## Product info
-- Product-A  unit-price: 120 THB
-- Product-B  unit-price: 130 THB
-- Product-C  unit-price:  10 THB
+|   Product   | Unit-price |
+|-------------|------------|
+| Product-A   |     120    |
+| Product-B   |     130    |
+| Product-C   |      10    |
 
 ## Order-001
-- Product-A  5 pieces  --> 600 THB
-- Product-B  3 pieces  --> 390 THB
-- Product-C  2 pieces  -->  20 THB
-- Shipmentfee          --> 523 THB
+|   Product   |   Piece   |  Cost   |
+|-------------|-----------|---------|
+| Product-A   |      5    |   600   |
+| Product-B   |      3    |   390   |
+| Product-C   |      2    |    20   |
+| Shipmentfee |           |   523   |
 
 ## Order-001-log result
-- Product-A  120 + 60 = 180 THB/piece
-- Product-B  130 + 61 = 191 THB/piece
-- Product-C   10 + 20 =  30 THB/piece
-- Shipmentfee             0 THB
-- Alignment               0 THB
+|   Product   | Product-price | Service-cost |  Cost   |
+|-------------|---------------|--------------|---------|
+| Product-A   |      120      |       60     |  180    |
+| Product-B   |      130      |       61     |  191    |
+| Product-C   |       10      |       20     |   30    |
+| Shipmentfee |               |              |   -     |
+| Alignment   |               |              |   0     |
 
-# Write a function that support 
-## input
+# Write a function that supports
+## input arguments
 1. price : [120, 130, 10]
 2. amount : [5,3,2]
 3. fee : 523
 
-## output
+## output result as
 1. result = [180, 191, 30]
 2. fee_align_suggest = 0
