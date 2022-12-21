@@ -36,4 +36,4 @@ An order can consist of multiple product and amount of purchasing
 
 ## output
 1. result = [180, 191, 30]
-2. align = 0
+2. fee_align_suggest = 0
